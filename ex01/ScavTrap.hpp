@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:02:42 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/17 19:56:52 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/19 07:24:16 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,8 @@ class ScavTrap: public ClapTrap
 		ScavTrap(std::string name);
 		ScavTrap(ScavTrap const& source);
 		ScavTrap & operator=(ScavTrap const& rhs);
-		void	attack(const std::string &target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
 	protected:
 	private:
-		std::string	_name;
-		unsigned int	_hp;
-		unsigned int	_mana;
-		unsigned int	_dmg;
 };
 
 #endif

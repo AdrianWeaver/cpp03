@@ -6,37 +6,37 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:02:41 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/17 19:57:36 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/19 06:25:12 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap(void) : ClapTrap()
+ClapTrap::ClapTrap(void) : _name("unknown"), _hp(10), _mana(10), _dmg(0)
 {
-	std::cout << "ScavTrap default constructor" << std::endl;
+	std::cout << "ClapTrap default constructor" << std::endl;
 	return ;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _mana(10), _dmg(0)
 {
-	std::cout << "ScavTrap default constructor" << std::endl;
+	std::cout << "ClapTrap default constructor" << std::endl;
 	return ;
 }
 
-ScavTrap::~ScavTrap(void)
+ClapTrap::~ClapTrap(void)
 {
-	std::cout << "ScavTrap destroyed" << std::endl;
+	std::cout << "ClapTrap destroyed" << std::endl;
 	return ;
 }
 
-ScavTrap::ScavTrap(ScavTrap const & source)
+ClapTrap::ClapTrap(ClapTrap const & source)
 {
 	*this = source;
 	return ;
 }
 
-ScavTrap & ScavTrap::operator=(ScavTrap const & rhs)
+ClapTrap & ClapTrap::operator=(ClapTrap const & rhs)
 {
 	if (this != &rhs)
 	{
@@ -48,7 +48,7 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & rhs)
 	return (*this);
 }
 
-void	ScavTrap::attack(const std::string& target)
+void	ClapTrap::attack(const std::string& target)
 {
 	if (this->_mana > 0)
 	{
@@ -67,7 +67,7 @@ void	ScavTrap::attack(const std::string& target)
 	return ;
 }
 
-void	ScavTrap::takeDamage(unsigned int amount)
+void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->_hp <= 0)
 	{
@@ -89,7 +89,7 @@ void	ScavTrap::takeDamage(unsigned int amount)
 	return ;
 }
 
-void	ScavTrap::beRepaired(unsigned int amount)
+void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->_mana > 0 && this->_hp > 0)
 	{
