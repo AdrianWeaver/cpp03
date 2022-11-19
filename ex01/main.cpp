@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:02:40 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/19 08:07:28 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/19 08:27:50 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 int main(void)
 {
+	std::cerr << "## showing constructor/destructors order. ##" << std::endl;
+	{
+		ScavTrap test;
+	}
+	std::cerr << "## now in main scope" << std::endl;
 	ClapTrap wolfTrap("Wolf trap");
 	ClapTrap otherTrap("Other trap");
 
@@ -54,5 +59,5 @@ int main(void)
 		std::cerr << "## Scavtrap trying to repair without hp ##" << std::endl;
 		scavtrap.beRepaired(1);
 	}
-return (0);
+	return (0);
 }
