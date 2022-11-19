@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:02:41 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/19 07:31:38 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/19 08:12:20 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 ScavTrap::ScavTrap(void) : ClapTrap()
 {
 	this->_hp = 100;
+	this->_maxHp = 100;
 	this->_mana = 50;
 	this->_dmg = 20;
 	std::cout << "ScavTrap default constructor" << std::endl;
@@ -23,6 +24,10 @@ ScavTrap::ScavTrap(void) : ClapTrap()
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
+	this->_hp = 100;
+	this->_maxHp = 100;
+	this->_mana = 50;
+	this->_dmg = 20;
 	std::cout << "ScavTrap default constructor" << std::endl;
 	return ;
 }
@@ -49,4 +54,14 @@ ScavTrap & ScavTrap::operator=(ScavTrap const& rhs)
 		this->_dmg = rhs._dmg;
 	}
 	return (*this);
+}
+
+void	ScavTrap::guardGate(void)
+{
+	if (this->_hp)
+		std::cout << this->_name << " has entered guard mode." << std::endl;
+	else
+		std::cout << this-> _name << " tries to enter despite being broken"
+			<< std::endl;
+	return ;
 }

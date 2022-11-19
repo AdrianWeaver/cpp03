@@ -6,19 +6,19 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:02:41 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/19 06:25:12 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/19 08:12:49 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void) : _name("unknown"), _hp(10), _mana(10), _dmg(0)
+ClapTrap::ClapTrap(void) : _name("unknown"), _hp(10), _maxHp(10), _mana(10), _dmg(0)
 {
 	std::cout << "ClapTrap default constructor" << std::endl;
 	return ;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _mana(10), _dmg(0)
+ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _maxHp(10), _mana(10), _dmg(0)
 {
 	std::cout << "ClapTrap default constructor" << std::endl;
 	return ;
@@ -97,7 +97,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 			<< std::endl;
 		this->_mana--;
 		this->_hp += amount;
-		if (this->_hp > 10)
+		if (this->_hp > this->_maxHp)
 		{
 			std::cout << this->_name << " over-repaired for " << this->_hp - 10
 				<< " hp." << std::endl;

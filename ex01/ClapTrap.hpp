@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:02:42 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/19 07:19:56 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/19 08:13:07 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class ClapTrap
 	protected:
 		std::string		_name;
 		unsigned int	_hp;
+		unsigned int	_maxHp;
 		unsigned int	_mana;
 		unsigned int	_dmg;
 	private:
