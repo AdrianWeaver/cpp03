@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:00:46 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/21 08:03:41 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/21 10:43:53 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	this->_hp = 100;
 	this->_maxHp = 100;
-	this->_mana = 100;
-	this->_dmg = 30;
+	this->_mana = 50;
+	this->_dmg = 20;
 	std::cout << "FragTrap default constructor" << std::endl;
 	return ;
 }

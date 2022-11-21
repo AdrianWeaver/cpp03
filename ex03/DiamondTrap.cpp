@@ -13,23 +13,24 @@
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void) : ClapTrap(), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(void) : ClapTrap("unknown_clap_name"), ScavTrap(), FragTrap()
 {
-	this->_hp = 100;
-	this->_maxHp = 100;
-	this->_mana = 50;
-	this->_dmg = 20;
+	this->_name = "unknown";
+	this->_hp = FragTrap::_hp;
+	this->_maxHp = FragTrap::_hp;
+	this->_mana = ScavTrap::_mana;
+	this->_dmg = FragTrap::_dmg;
 	std::cout << "DiamondTrap default constructor" << std::endl;
 	return ;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap()
 {
-	this->_hp = 100;
-	this->_maxHp = 100;
-	this->_mana = 100;
-	this->_dmg = 30;
 	this->_name = name;
+	this->_hp = FragTrap::_hp;
+	this->_maxHp = FragTrap::_hp;
+	this->_mana = ScavTrap::_mana;
+	this->_dmg = FragTrap::_dmg;
 	std::cout << "DiamondTrap default constructor" << std::endl;
 	return ;
 }
@@ -58,12 +59,9 @@ DiamondTrap & DiamondTrap::operator=(DiamondTrap const& rhs)
 	return (*this);
 }
 
-void	DiamondTrap::highFivesGuys(void)
+void	DiamondTrap::whoAmI(void)
 {
-	if (this->_hp)
-		std::cout << this->_name << " is english and therefore says give me five." << std::endl;
-	else
-		std::cout << this-> _name << " tries to enter give-me-five mode but is broken beyond repair."
-			<< std::endl;
+	std::cout << "My name is: " << _name << " my ClapTrap class name is: "
+		<< ClapTrap::_name << std::endl;
 	return ;
 }

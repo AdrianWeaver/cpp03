@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:02:40 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/21 08:56:52 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/21 11:01:52 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int main(void)
 	test.attack("victim");
 	test.guardGate();
 	test.highFivesGuys();
+	test.whoAmI();
 	return (0);
 }
