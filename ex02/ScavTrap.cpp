@@ -6,13 +6,13 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:02:41 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/19 08:12:20 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/21 11:10:26 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void) : ClapTrap()
+ScavTrap::ScavTrap(void) : ClapTrap("unknown")
 {
 	this->_hp = 100;
 	this->_maxHp = 100;

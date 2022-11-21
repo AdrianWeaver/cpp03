@@ -6,13 +6,13 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:00:46 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/21 10:44:30 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/21 11:07:51 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void) : ClapTrap()
+FragTrap::FragTrap(void) : ClapTrap("unknown")
 {
 	this->_hp = 100;
 	this->_maxHp = 100;
