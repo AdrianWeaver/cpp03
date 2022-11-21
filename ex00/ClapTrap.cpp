@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:02:41 by aweaver           #+#    #+#             */
-/*   Updated: 2022/11/17 17:24:33 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/11/21 10:33:07 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ClapTrap::attack(const std::string& target)
 	else
 	{
 		std::cout << this->_name << " tries to attack " << target;
-		if (this->_hp <= 0)
+		if (this->_hp == 0)
 			std::cout << " but is out of hp" << std::endl;
 		else if (this->_mana == 0)
 			std::cout << " but is out of energy." << std::endl;
@@ -69,7 +69,7 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if (this->_hp <= 0)
+	if (this->_hp == 0)
 	{
 		std::cout << this->_name << " is already damaged beyond repair"
 			<< std::endl;
